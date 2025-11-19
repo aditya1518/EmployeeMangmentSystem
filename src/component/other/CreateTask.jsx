@@ -87,7 +87,8 @@ const CreateTask = () => {
             <select
   value={assignTo}
   onChange={(e) => setAssignTo(e.target.value)}
-  required
+              required
+              id="task-list"
   className="text-sm py-1 px-2 w-4/5 rounded mb-4
     bg-[#2b2b2b] border border-gray-600 
     text-gray-200 focus:border-emerald-500 
