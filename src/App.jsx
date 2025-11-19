@@ -10,7 +10,7 @@ const App = () => {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
-  const [appReady, setAppReady] = useState(false); // ⭐ Fix for login flicker
+  const [appReady, setAppReady] = useState(false); 
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -35,10 +35,10 @@ const App = () => {
       }
     }
 
-    setAppReady(true); // ⭐ Prevents flicker
+    setAppReady(true); 
   }, []);
 
-  if (!appReady) return null; // ⭐ UI only renders when data loaded
+  if (!appReady) return null; 
 
   const handleLogin = (email, password) => {
     if (email === "admin@example.com" && password === "123") {
