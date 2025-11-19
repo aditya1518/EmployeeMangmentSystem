@@ -2,25 +2,18 @@ import React from "react";
 
 const FailedTask = ({ data }) => {
   return (
-    <div className="flex-shrink-0 h-full w-[348px] p-5 bg-red-400 rounded-xl flex flex-col">
-      
+    <div className="flex-shrink-0 w-full p-4 bg-rose-600 rounded-xl flex flex-col md:flex-shrink-0 md:h-60 md:w-[370px] md:p-5  md:rounded-xl md:flex md:flex-col">
       <div className="flex justify-between items-center text-sm">
-        <h3 className="px-3 py-1 rounded bg-red-600">{data.category}</h3>
-        <h4 className="text-sm">{data.date}</h4>
+        <span className="px-3 py-1 rounded bg-emerald-800 text-white text-xs">{data.category}</span>
+        <span className="text-sm">{data.date}</span>
       </div>
 
-      <h2 className="mt-5 text-2xl font-semibold">{data.title}</h2>
+      <h2 className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold line-clamp-2">{data.title}</h2>
+      <p className="mt-2 text-sm sm:text-sm md:text-base flex-grow line-clamp-4">{data.description}</p>
 
-      <p className="mt-2 text-sm flex-grow">
-        {data.description}
-      </p>
-
-      <div className="mt-4 flex justify-center">
-        <button className="w-full bg-red-600 py-1 px-4 text-sm rounded-2xl ">
-          This task has failed
-        </button>
+      <div className="mt-4">
+        <span className="text-sm font-medium text-white-700   ">Failed  ❎</span>
       </div>
-
     </div>
   );
 };

@@ -5,10 +5,10 @@ import AllTask from "../other/AllTask";
 
 function AdminDashboard(props) {
   return (
-    <div className="p-7 w-full h-screen">
+    <div className="lg:p-7 p-3 w-full h-screen">
       <Header changeUser={props.changeUser} />
       <CreateTask />
-      <AllTask />
+      <AllTask setSelectedEmployee={props.setSelectedEmployee} />
     </div>
   );
 }
